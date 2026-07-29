@@ -40,6 +40,17 @@ function HeroSection() {
       return;
     }
 
+    if (!WEB3FORMS_ACCESS_KEY) {
+      setStatus('error');
+      setErrorMessage(
+        'Erro de configuração: Chave de API de e-mail não encontrada.',
+      );
+      console.error(
+        'VITE_WEB3FORMS_ACCESS_KEY não está definida nas variáveis de ambiente.',
+      );
+      return;
+    }
+
     setStatus('loading');
     setErrorMessage('');
 
