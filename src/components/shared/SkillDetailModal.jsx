@@ -124,7 +124,7 @@ function SkillDetailModal({ skill, onClose }) {
               <button
                 onClick={onClose}
                 type="button"
-                className="px-5 py-2 text-sm font-accent font-semibold rounded-full bg-(--primary-color) text-white hover:bg-(--primary-color)/90 transition cursor-pointer shadow-md"
+                className="px-5 py-2 text-sm font-accent font-semibold rounded-full bg-(--color-primary) text-white hover:bg-(--color-primary-hover) transition cursor-pointer shadow-md"
               >
                 Entendido
               </button>

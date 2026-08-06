@@ -47,14 +47,11 @@ function SkillSection() {
         <div>
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-(--primary-color)/10 border border-(--primary-color)/20 text-(--primary-color) text-xs font-accent font-semibold mb-3">
             <FaWandMagicSparkles className="size-3.5" />
-            <span>02 / Habilidades & Competências</span>
+            <span>02 / Skills & Soft Skills</span>
           </div>
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-(--tertiary-color)">
             Minhas Skills
           </h2>
-          <p className="font-body text-sm md:text-base text-(--tertiary-color)/80 mt-1 max-w-2xl">
-            Clique em qualquer habilidade para explorar o contexto prático de aplicação e as ferramentas do ecossistema.
-          </p>
         </div>
 
         {/* Controles de Busca e Filtro por Dropdown (Padrão da Galeria & Trabalhos) */}
@@ -105,7 +102,7 @@ function SkillSection() {
               <div className="mb-4 flex items-center justify-between text-xs font-accent text-gray-500">
                 <span>
                   Exibindo {filteredSkills.length}{' '}
-                  {filteredSkills.length === 1 ? 'habilidade' : 'habilidades'}
+                  {filteredSkills.length === 1 ? 'Skill' : 'Skills'}
                 </span>
                 <span className="italic">Clique em um card para ver detalhes</span>
               </div>

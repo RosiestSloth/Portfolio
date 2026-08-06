@@ -31,7 +31,7 @@ export const SKILLS_DATA = [
     category: 'frontend',
     categoryLabel: 'Frontend',
     icon: FaReact,
-    level: 'Especialista',
+    level: 'Avançado',
     tags: ['Vite', 'Next.js', 'Hooks', 'Context API', 'State Management'],
     description:
       'Construção de aplicações SPA e SSR modernas com foco em performance, reutilização de componentes e ótima experiência do usuário.',
@@ -72,7 +72,7 @@ export const SKILLS_DATA = [
     category: 'backend',
     categoryLabel: 'Backend & DB',
     icon: FaNodeJs,
-    level: 'Avançado',
+    level: 'Intermediário',
     tags: ['Express', 'REST APIs', 'Autenticação', 'Middleware'],
     description:
       'Criação de APIs robustas, escaláveis e eficientes no servidor utilizando JavaScript/TypeScript e arquiteturas modernas.',
@@ -85,7 +85,7 @@ export const SKILLS_DATA = [
     category: 'backend',
     categoryLabel: 'Backend & DB',
     icon: SiPrisma,
-    level: 'Avançado',
+    level: 'Iniciante',
     tags: ['Migrations', 'Type-Safety', 'Modelagem de Dados', 'Queries'],
     description:
       'Mapeamento objeto-relacional seguro contra erros de tipagem para interagir com bancos de dados relacionais de forma intuitiva.',
@@ -98,7 +98,7 @@ export const SKILLS_DATA = [
     category: 'backend',
     categoryLabel: 'Backend & DB',
     icon: FaDatabase,
-    level: 'Intermediário / Avançado',
+    level: 'Intermediário',
     tags: ['PostgreSQL', 'MySQL', 'SQLite', 'Indexação'],
     description:
       'Estruturação de bancos de dados relacionais, criação de queries performáticas e manutenção da integridade dos dados.',
@@ -139,7 +139,7 @@ export const SKILLS_DATA = [
     category: 'tools',
     categoryLabel: 'Design & Tools',
     icon: SiVitest,
-    level: 'Proficiente',
+    level: 'Intermediário',
     tags: ['Unit Testing', 'Component Testing', 'Mocking', 'Coverage'],
     description:
       'Garantia da qualidade do software por meio de testes unitários e de componentes rápidos e automatizados.',

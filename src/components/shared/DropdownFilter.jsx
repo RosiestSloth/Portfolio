@@ -30,7 +30,7 @@ function DropdownFilter({
         animate={{ opacity: 1, scale: 1 }}
         transition={{ ...transition, delay: 0.3 }}
         onClick={() => setDropdownOpen(!dropdownOpen)}
-        className="flex items-center gap-3 px-5 py-2.5 rounded-full text-white font-accent font-semibold text-sm bg-(--primary-color) shadow-[0_2px_8px_rgba(0,0,0,0.15)] hover:bg-(--primary-color)/80 transition duration-100 cursor-pointer"
+        className="flex items-center gap-3 px-5 py-2.5 rounded-full text-white font-accent font-semibold text-sm bg-(--color-primary) shadow-[0_2px_8px_rgba(0,0,0,0.15)] hover:bg-(--color-primary-hover) transition duration-100 cursor-pointer"
         type="button"
       >
         <FaFilter className="w-3.5 h-3.5 shrink-0" />

@@ -13,9 +13,9 @@ function Footer() {
   ];
 
   return (
-    <footer className="">
+    <footer className="w-full flex flex-col items-center justify-center">
       {/* Primeira seção do footer */}
-      <div className="text-white font-body text-md bg-(--primary-color) px-6 md:px-10 lg:px-20 py-8 md:py-12">
+      <div className="text-white w-full font-body text-md bg-(--primary-color) px-6 md:px-10 lg:px-20 py-8 md:py-12">
         <p>
           “Transformando ideias em experiências digitais excepcionais através de
           código limpo, design intuitivo e foco em resultados. Vamos construir o
@@ -23,9 +23,9 @@ function Footer() {
         </p>
       </div>
       {/* Conteúdo principal do footer */}
-      <div className="bg-(--tertiary-color) border-t border-gray-100 px-6 md:px-10 lg:px-20 py-8 md:py-12">
-        <div className="flex flex-col md:flex-row items-start justify-around gap-10">
-          <div className="flex-1">
+      <div className="bg-(--tertiary-color) w-full border-t border-gray-100 px-6 md:px-10 lg:px-20 py-8 md:py-12">
+        <div className="flex flex-col md:flex-row items-start mx-auto justify-between gap-20">
+          <div className="">
             <img
               src="/img/Logo White.png"
               alt="Logo White"

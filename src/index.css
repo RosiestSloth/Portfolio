@@ -26,6 +26,7 @@
 
   /* Legacy aliases — manter para compatibilidade com Tailwind `text-(--xxx)` */
   --primary-color: #448ef3;
+  --primary-color-hover: #3a7fd9;
   --secondary-color: #3863b2;
   --tertiary-color: #182a4c;
 

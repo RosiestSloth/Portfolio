@@ -1,20 +1,3 @@
-/**
- * ══════════════════════════════════════════════════════════════════════════════
- * DADOS DA GALERIA
- * ══════════════════════════════════════════════════════════════════════════════
- *
- * Para ADICIONAR novas imagens:
- *   1. Adicione o arquivo da imagem em /img/ (ou use uma URL externa)
- *   2. Adicione um objeto no array `photos` da categoria desejada
- *   3. Cada foto precisa de: src, width, height, alt, title
- *
- * Para ADICIONAR uma nova categoria:
- *   1. Adicione um novo objeto no array `galleryCategories`
- *   2. Defina: id (único), title, description, photos (array)
- *
- * ══════════════════════════════════════════════════════════════════════════════
- */
-
 export const galleryCategories = [
   {
     id: 'design',
@@ -59,8 +42,8 @@ export const galleryCategories = [
       },
       {
         src: '/img/cards/iPhone_17_Pro_Max.png',
-        width: 1080,
-        height: 1920,
+        width: 1920,
+        height: 1080,
         alt: 'Design iPhone 17',
         title: 'Design iPhone 17',
       },
