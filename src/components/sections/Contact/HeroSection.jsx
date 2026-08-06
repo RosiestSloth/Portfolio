@@ -9,6 +9,7 @@ import {
   FaSpinner,
   FaWhatsapp,
 } from 'react-icons/fa6';
+import { checkRateLimit, recordSubmission } from '@/utils/rateLimiter';
 
 // ─── CONFIGURAÇÃO DO SERVIÇO DE EMAIL ─────────────────────────────────────────
 // A chave é carregada com segurança de arquivos de ambiente (.env ou .env.local).
@@ -20,6 +21,7 @@ function HeroSection() {
     name: '',
     email: '',
     message: '',
+    botcheck: '',
   });
 
   const [status, setStatus] = useState('idle'); // idle | loading | success | error
@@ -32,6 +34,19 @@ function HeroSection() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Anti-spam Honeypot: se preenchido por robôs, rejeita silenciosamente
+    if (formData.botcheck) {
+      return;
+    }
+
+    // Rate Limiting local (sem captura de IP ou dados pessoais)
+    const rateCheck = checkRateLimit();
+    if (!rateCheck.allowed) {
+      setStatus('error');
+      setErrorMessage(rateCheck.message);
+      return;
+    }
 
     // Validação básica
     if (!formData.name || !formData.email || !formData.message) {
@@ -74,8 +89,9 @@ function HeroSection() {
       const result = await response.json();
 
       if (response.ok && result.success) {
+        recordSubmission();
         setStatus('success');
-        setFormData({ name: '', email: '', message: '' }); // Limpa o formulário
+        setFormData({ name: '', email: '', message: '', botcheck: '' }); // Limpa o formulário
       } else {
         throw new Error(
           result.message || 'Ocorreu um erro ao enviar a mensagem.',
@@ -191,6 +207,18 @@ function HeroSection() {
           className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 relative overflow-hidden"
         >
           <form onSubmit={handleSubmit} className="space-y-4">
+            {/* Campo Honeypot para proteção contra Bots (invisível para usuários humanos) */}
+            <input
+              type="checkbox"
+              id="botcheck"
+              name="botcheck"
+              className="hidden"
+              style={{ display: 'none' }}
+              checked={Boolean(formData.botcheck)}
+              onChange={(e) =>
+                setFormData((prev) => ({ ...prev, botcheck: e.target.checked }))
+              }
+            />
             <div>
               <label
                 htmlFor="name"
