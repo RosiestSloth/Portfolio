@@ -137,12 +137,29 @@ function Resume() {
             </div>
             <div className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-200/80 shadow-xs backdrop-blur-sm">
               <p className="font-body text-base leading-relaxed text-(--tertiary-color)/90">
-                Graduando em Engenharia de Software com sólida base técnica em desenvolvimento{' '}
-                <strong className="text-(--tertiary-color)">Full Stack</strong> e{' '}
-                <strong className="text-(--tertiary-color)">UX/UI Design</strong>. Experiência no ciclo de vida de desenvolvimento de software, desde a concepção de interfaces acessíveis até a implementação de sistemas escaláveis utilizando tecnologias modernas como{' '}
-                <span className="font-semibold text-(--primary-color)">React</span>,{' '}
-                <span className="font-semibold text-(--primary-color)">Next.js</span> e{' '}
-                <span className="font-semibold text-(--primary-color)">Node.js</span>. Focado na entrega de soluções eficientes que otimizam a experiência do usuário e geram valor direto ao negócio.
+                Graduando em Engenharia de Software com sólida base técnica em
+                desenvolvimento{' '}
+                <strong className="text-(--tertiary-color)">Full Stack</strong>{' '}
+                e{' '}
+                <strong className="text-(--tertiary-color)">
+                  UX/UI Design
+                </strong>
+                . Experiência no ciclo de vida de desenvolvimento de software,
+                desde a concepção de interfaces acessíveis até a implementação
+                de sistemas escaláveis utilizando tecnologias modernas como{' '}
+                <span className="font-semibold text-(--primary-color)">
+                  React
+                </span>
+                ,{' '}
+                <span className="font-semibold text-(--primary-color)">
+                  Next.js
+                </span>{' '}
+                e{' '}
+                <span className="font-semibold text-(--primary-color)">
+                  Node.js
+                </span>
+                . Focado na entrega de soluções eficientes que otimizam a
+                experiência do usuário e geram valor direto ao negócio.
               </p>
             </div>
           </section>
@@ -255,7 +272,9 @@ function Resume() {
                 </span>
               </div>
               <p className="font-body text-sm leading-relaxed text-(--tertiary-color)/85">
-                Formação com foco em Engenharia de Requisitos, Arquitetura de Software, Testes Automatizados, Metodologias Ágeis e Desenvolvimento Full Stack.
+                Formação com foco em Engenharia de Requisitos, Arquitetura de
+                Software, Testes Automatizados, Metodologias Ágeis e
+                Desenvolvimento Full Stack.
               </p>
             </div>
           </section>

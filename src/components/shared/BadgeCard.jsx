@@ -1,4 +1,8 @@
-function BadgeCard({ item, styles = 'grid-cols-2 md:grid-cols-3', onSelectSkill }) {
+function BadgeCard({
+  item,
+  styles = 'grid-cols-2 md:grid-cols-3',
+  onSelectSkill,
+}) {
   return (
     <div
       className={`w-full grid ${styles} gap-4 items-center justify-center p-2 sm:p-4`}

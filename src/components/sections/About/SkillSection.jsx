@@ -1,6 +1,10 @@
 import { AnimatePresence, motion } from 'motion/react';
 import { useMemo, useState } from 'react';
-import { FaMagnifyingGlass, FaWandMagicSparkles, FaXmark } from 'react-icons/fa6';
+import {
+  FaMagnifyingGlass,
+  FaWandMagicSparkles,
+  FaXmark,
+} from 'react-icons/fa6';
 import { SKILLS_DATA, SKILL_CATEGORIES } from '@/data/skillsData';
 import BadgeCard from '../../shared/BadgeCard';
 import DropdownFilter from '../../shared/DropdownFilter';
@@ -30,7 +34,8 @@ function SkillSection() {
         skill.label.toLowerCase().includes(query) ||
         skill.description.toLowerCase().includes(query) ||
         skill.categoryLabel.toLowerCase().includes(query) ||
-        (skill.tags && skill.tags.some((tag) => tag.toLowerCase().includes(query)));
+        (skill.tags &&
+          skill.tags.some((tag) => tag.toLowerCase().includes(query)));
 
       return matchesCategory && matchesSearch;
     });
@@ -104,7 +109,9 @@ function SkillSection() {
                   Exibindo {filteredSkills.length}{' '}
                   {filteredSkills.length === 1 ? 'Skill' : 'Skills'}
                 </span>
-                <span className="italic">Clique em um card para ver detalhes</span>
+                <span className="italic">
+                  Clique em um card para ver detalhes
+                </span>
               </div>
               <BadgeCard
                 item={filteredSkills}

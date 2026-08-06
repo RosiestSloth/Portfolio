@@ -10,7 +10,7 @@ import {
 
 function Carousel({ items = [] }) {
   const autoplayRef = useRef(
-    Autoplay({ delay: 4500, stopOnInteraction: false, stopOnMouseEnter: true })
+    Autoplay({ delay: 4500, stopOnInteraction: false, stopOnMouseEnter: true }),
   );
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
@@ -19,7 +19,7 @@ function Carousel({ items = [] }) {
       align: 'start',
       skipSnaps: false,
     },
-    [autoplayRef.current]
+    [autoplayRef.current],
   );
 
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -39,7 +39,7 @@ function Carousel({ items = [] }) {
     (index) => {
       if (emblaApi) emblaApi.scrollTo(index);
     },
-    [emblaApi]
+    [emblaApi],
   );
 
   const onSelect = useCallback(() => {
@@ -82,7 +82,6 @@ function Carousel({ items = [] }) {
     >
       {/* Botões de Navegação Flutuantes (shadcn UI style) */}
       <div className="flex items-center justify-between gap-3 mb-6">
-
         <div className="flex items-center gap-2 z-10">
           <button
             onClick={scrollPrev}
@@ -105,7 +104,10 @@ function Carousel({ items = [] }) {
       </div>
 
       {/* Viewport do Embla Carousel */}
-      <div className="overflow-hidden rounded-2xl cursor-grab active:cursor-grabbing p-1" ref={emblaRef}>
+      <div
+        className="overflow-hidden rounded-2xl cursor-grab active:cursor-grabbing p-1"
+        ref={emblaRef}
+      >
         <div className="flex -ml-4">
           {items.map((item, index) => (
             <div
