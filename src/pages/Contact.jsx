@@ -4,7 +4,9 @@ import PageTransition from '@/components/shared/PageTransition';
 function Contact() {
   return (
     <PageTransition>
-      <HeroSection />
+      <div id="contato">
+        <HeroSection />
+      </div>
     </PageTransition>
   );
 }

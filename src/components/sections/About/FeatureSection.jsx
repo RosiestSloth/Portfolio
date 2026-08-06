@@ -1,19 +1,20 @@
-import { FaCss3Alt, FaReact, FaVuejs } from 'react-icons/fa6';
+import { FaReact, FaVuejs } from 'react-icons/fa6';
 import Cards from '../../shared/Cards';
+import { SiPrisma } from 'react-icons/si';
 
 function FeatureSection() {
   const features = [
     {
       icon: FaReact,
-      title: 'React & Vite',
+      title: 'React',
       description:
-        'Desenvolvimento Front End utilizando a biblioteca React com Vite, utilizando boas práticas e construção de componentes reutilizáveis.',
+        'Desenvolvimento Front End utilizando a biblioteca React com Vite e Next.js, utilizando boas práticas e construção de componentes reutilizáveis.',
     },
     {
-      icon: FaCss3Alt,
-      title: 'Tailwind CSS',
+      icon: SiPrisma,
+      title: 'Prisma ORM',
       description:
-        'Estilização com Tailwind CSS, biblioteca avançada e moderna, performance otimizada e um design system escalável.',
+        'Criação de APIs com prisma, utilizando arquiteturas de código atuais, promovendo a escalabilidade e manutenção do código',
     },
     {
       icon: FaVuejs,

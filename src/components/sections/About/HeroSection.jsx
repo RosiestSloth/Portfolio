@@ -1,11 +1,22 @@
 import { motion } from 'motion/react';
+import { FaUser } from 'react-icons/fa6';
 
 function Hero() {
   const transition = { duration: 0.7, ease: [0.16, 1, 0.3, 1] };
 
   return (
-    <section className="px-6 md:px-10 lg:px-20 py-10 md:py-16 mt-10 lg:mt-20 flex flex-col md:flex-row items-center gap-10">
+    <section className="px-6 md:px-10 lg:px-20 py-8 md:py-14 mt-4 lg:mt-10 flex flex-col md:flex-row items-center gap-10">
       <div className="flex-2 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={transition}
+          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-(--primary-color)/10 border border-(--primary-color)/20 text-(--primary-color) text-xs font-accent font-semibold mb-4"
+        >
+          <FaUser className="size-3.5" />
+          <span>01 / Visão Geral & Perfil</span>
+        </motion.div>
+
         <motion.div
           initial={{ scale: 0.85, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -18,6 +29,7 @@ function Hero() {
             Disponível para novos projetos
           </p>
         </motion.div>
+
 
         <motion.h1
           initial={{ y: 20, opacity: 0 }}

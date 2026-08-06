@@ -8,6 +8,7 @@ function Footer() {
     { to: '/works', label: 'Trabalhos' },
     { to: '/services', label: 'Serviços' },
     { to: '/gallery', label: 'Galeria' },
+    { to: '/resume', label: 'Currículo' },
     { to: '/contact', label: 'Contato' },
   ];
 

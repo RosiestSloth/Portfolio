@@ -4,6 +4,7 @@ import HeroSection from '@/components/sections/Gallery/HeroSection';
 import CTASection from '@/components/sections/Works/CTASection';
 import DropdownFilter from '@/components/shared/DropdownFilter';
 import PageTransition from '@/components/shared/PageTransition';
+import SectionIndicator from '@/components/shared/SectionIndicator';
 import { galleryCategories } from '@/data/galleryData';
 
 function Gallery() {
@@ -22,33 +23,44 @@ function Gallery() {
     })),
   ];
 
+  const sections = [
+    { id: 'galeria', label: 'Galeria', number: '01' },
+    { id: 'contato', label: 'Contato', number: '02' },
+  ];
+
   return (
     <PageTransition>
+      <SectionIndicator sections={sections} />
+
       <main className="min-h-screen bg-gray-50">
-        <HeroSection />
+        <div id="galeria">
+          <HeroSection />
 
-        {/* Filtros por categoria */}
-        <div className="px-6 md:px-10 lg:px-20 pb-4">
-          <DropdownFilter
-            filters={filters}
-            activeFilter={activeFilter}
-            onChange={setActiveFilter}
-          />
-        </div>
-
-        {/* Categorias */}
-        <div className="pb-10">
-          {filteredCategories.map((category) => (
-            <GalleryCategory
-              key={category.id}
-              title={category.title}
-              description={category.description}
-              photos={category.photos}
+          {/* Filtros por categoria */}
+          <div className="px-6 md:px-10 lg:px-20 pb-4">
+            <DropdownFilter
+              filters={filters}
+              activeFilter={activeFilter}
+              onChange={setActiveFilter}
             />
-          ))}
+          </div>
+
+          {/* Categorias */}
+          <div className="pb-10">
+            {filteredCategories.map((category) => (
+              <GalleryCategory
+                key={category.id}
+                title={category.title}
+                description={category.description}
+                photos={category.photos}
+              />
+            ))}
+          </div>
         </div>
 
-        <CTASection />
+        <div id="contato">
+          <CTASection />
+        </div>
       </main>
     </PageTransition>
   );
