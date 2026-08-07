@@ -6,7 +6,7 @@ export const galleryCategories = [
       'Explorações visuais focadas em experiência do usuário e interfaces modernas.',
     photos: [
       {
-        src: '/img/cards/Invitation.png',
+        src: '/img/cards/Invitation.webp',
         width: 1200,
         height: 1600,
         alt: 'Identidade Visual & Convites',
@@ -20,28 +20,28 @@ export const galleryCategories = [
         title: 'App Interface Design',
       },
       {
-        src: '/img/works/nexus-crm.png',
+        src: '/img/works/nexus-crm.webp',
         width: 2730,
         height: 1536,
         alt: 'Nexus CRM Design System',
         title: 'UX/UI Design',
       },
       {
-        src: '/img/works/cscode-landing-page.png',
+        src: '/img/works/cscode-landing-page.webp',
         width: 3000,
         height: 2000,
         alt: 'CsCODE Landing Page',
         title: 'Landing Page',
       },
       {
-        src: '/img/FeedbackAnalytics.png',
+        src: '/img/FeedbackAnalytics.webp',
         width: 2000,
         height: 1000,
         alt: 'Dashboard Feedback Analytics',
         title: 'Dashboard',
       },
       {
-        src: '/img/cards/iPhone_17_Pro_Max.png',
+        src: '/img/cards/iPhone_17_Pro_Max.webp',
         width: 1920,
         height: 1080,
         alt: 'Design iPhone 17',
@@ -56,7 +56,7 @@ export const galleryCategories = [
       'Capturas de projetos web, dashboards e sistemas que desenvolvi recentemente.',
     photos: [
       {
-        src: '/img/cards/Clinica_Sensory.png',
+        src: '/img/cards/Clinica_Sensory.webp',
         width: 1920,
         height: 1080,
         alt: 'Projeto Clínica Sensory',
@@ -70,14 +70,14 @@ export const galleryCategories = [
         title: 'Coding',
       },
       {
-        src: '/img/cards/Feedback_Analytics.png',
+        src: '/img/cards/Feedback_Analytics.webp',
         width: 1920,
         height: 1080,
         alt: 'Arquitetura Feedback Analytics',
         title: 'Arquitetura Feedback Analytics',
       },
       {
-        src: '/img/FeedbackAnalytics.png',
+        src: '/img/FeedbackAnalytics.webp',
         width: 1920,
         height: 1080,
         alt: 'Arquitetura Feedback Analytics',

@@ -1,6 +1,6 @@
 import { FaReact, FaVuejs } from 'react-icons/fa6';
-import Cards from '../../shared/Cards';
 import { SiPrisma } from 'react-icons/si';
+import Cards from '../../shared/Cards';
 
 function FeatureSection() {
   const features = [

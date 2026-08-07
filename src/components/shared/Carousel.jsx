@@ -7,6 +7,7 @@ import {
   FaChevronRight,
   FaGithub,
 } from 'react-icons/fa6';
+import OptimizedImage from '@/components/shared/OptimizedImage';
 
 function Carousel({ items = [] }) {
   const autoplayRef = useRef(
@@ -72,11 +73,9 @@ function Carousel({ items = [] }) {
   };
 
   return (
-    <div
+    <section
       className="relative w-full focus:outline-none"
       onKeyDown={handleKeyDown}
-      tabIndex={0}
-      role="region"
       aria-roledescription="carousel"
       aria-label="Carrossel de Projetos"
     >
@@ -86,7 +85,7 @@ function Carousel({ items = [] }) {
           <button
             onClick={scrollPrev}
             type="button"
-            className="p-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/20 transition-all duration-200 cursor-pointer shadow-md hover:scale-105 active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed"
+            className="p-3 rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/20 transition-all duration-200 cursor-pointer shadow-md hover:scale-105 active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed min-w-11 min-h-11 flex items-center justify-center"
             aria-label="Projeto anterior"
           >
             <FaChevronLeft className="size-4" />
@@ -95,7 +94,7 @@ function Carousel({ items = [] }) {
           <button
             onClick={scrollNext}
             type="button"
-            className="p-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/20 transition-all duration-200 cursor-pointer shadow-md hover:scale-105 active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed"
+            className="p-3 rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/20 transition-all duration-200 cursor-pointer shadow-md hover:scale-105 active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed min-w-11 min-h-11 flex items-center justify-center"
             aria-label="Próximo projeto"
           >
             <FaChevronRight className="size-4" />
@@ -117,9 +116,11 @@ function Carousel({ items = [] }) {
               <div className="group h-full bg-white/95 backdrop-blur-xl rounded-2xl p-5 border border-gray-200/90 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5">
                 {/* Imagem do Projeto */}
                 <div className="relative overflow-hidden rounded-xl mb-4 bg-gray-100 aspect-video border border-gray-200">
-                  <img
+                  <OptimizedImage
                     src={item.img}
                     alt={item.title}
+                    width={640}
+                    height={360}
                     className="size-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                     loading="lazy"
                   />
@@ -138,9 +139,9 @@ function Carousel({ items = [] }) {
                   {/* Tags Tecnológicas se disponíveis */}
                   {item.tags && item.tags.length > 0 && (
                     <div className="flex flex-wrap gap-1.5 mt-auto pt-2">
-                      {item.tags.map((tag, i) => (
+                      {item.tags.map((tag) => (
                         <span
-                          key={i}
+                          key={tag}
                           className="text-[10px] font-accent font-semibold px-2 py-0.5 rounded-md bg-(--primary-color)/10 text-(--primary-color) border border-(--primary-color)/20"
                         >
                           {tag}
@@ -157,7 +158,8 @@ function Carousel({ items = [] }) {
                       href={item.linkSite}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 inline-flex items-center justify-center gap-1.5 font-accent font-semibold text-white bg-(--color-primary) hover:bg-(--color-primary-hover) px-3 py-2 text-xs rounded-full transition-all shadow-xs cursor-pointer"
+                      className="flex-1 inline-flex items-center justify-center gap-1.5 font-accent font-semibold text-white bg-(--color-primary) hover:bg-(--color-primary-hover) px-3 py-2 text-xs rounded-full transition-all shadow-xs cursor-pointer min-h-9"
+                      aria-label={`Ver site do projeto ${item.title}`}
                     >
                       <FaArrowUpRightFromSquare className="size-3" />
                       <span>Ver Site</span>
@@ -169,7 +171,8 @@ function Carousel({ items = [] }) {
                       href={item.linkGitHub}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-1.5 font-accent font-semibold text-(--tertiary-color) bg-gray-100 hover:bg-gray-200 border border-gray-300 px-3 py-2 text-xs rounded-full transition-all cursor-pointer"
+                      className="inline-flex items-center justify-center gap-1.5 font-accent font-semibold text-(--tertiary-color) bg-gray-100 hover:bg-gray-200 border border-gray-300 px-3 py-2 text-xs rounded-full transition-all cursor-pointer min-h-9"
+                      aria-label={`Ver repositório do projeto ${item.title} no GitHub`}
                     >
                       <FaGithub className="size-3.5" />
                       <span className="hidden sm:inline">GitHub</span>
@@ -182,23 +185,27 @@ function Carousel({ items = [] }) {
         </div>
       </div>
 
-      {/* Indicadores de Pílula (Pagination Dots) */}
-      <div className="flex justify-center items-center gap-2 mt-6">
+      {/* Indicadores de Pílula (Pagination Dots) com touch target >= 44px */}
+      <div className="flex justify-center items-center gap-1 mt-6">
         {scrollSnaps.map((_, index) => (
           <button
-            key={index}
+            key={`dot-${index}`}
             onClick={() => scrollTo(index)}
             type="button"
-            className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer focus:outline-none ${
-              index === selectedIndex
-                ? 'w-8 bg-white shadow-sm'
-                : 'w-2.5 bg-white/40 hover:bg-white/70'
-            }`}
+            className="p-3 cursor-pointer focus:outline-none flex items-center justify-center min-w-11 min-h-11"
             aria-label={`Ir para slide ${index + 1}`}
-          />
+          >
+            <span
+              className={`h-2.5 rounded-full transition-all duration-300 block ${
+                index === selectedIndex
+                  ? 'w-8 bg-white shadow-sm'
+                  : 'w-2.5 bg-white/40 hover:bg-white/70'
+              }`}
+            />
+          </button>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

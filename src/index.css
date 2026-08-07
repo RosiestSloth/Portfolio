@@ -5,12 +5,12 @@
    ══════════════════════════════════════════════════════════════════════════════ */
 
 :root {
-  /* ─── Cores ─── */
-  --color-primary: #448ef3;
-  --color-primary-hover: #3a7fd9;
-  --color-primary-light: rgba(68, 142, 243, 0.1);
-  --color-primary-muted: rgba(68, 142, 243, 0.6);
-  --color-primary-subtle: rgba(68, 142, 243, 0.2);
+  /* ─── Cores (Ajustadas para Acessibilidade WCAG AA 4.5:1+) ─── */
+  --color-primary: #2161db;
+  --color-primary-hover: #1b4fbc;
+  --color-primary-light: rgba(33, 97, 219, 0.1);
+  --color-primary-muted: rgba(33, 97, 219, 0.6);
+  --color-primary-subtle: rgba(33, 97, 219, 0.2);
 
   --color-secondary: #3863b2;
   --color-tertiary: #182a4c;
@@ -25,8 +25,8 @@
   --color-border-light: #f3f4f6;
 
   /* Legacy aliases — manter para compatibilidade com Tailwind `text-(--xxx)` */
-  --primary-color: #448ef3;
-  --primary-color-hover: #3a7fd9;
+  --primary-color: #2161db;
+  --primary-color-hover: #1b4fbc;
   --secondary-color: #3863b2;
   --tertiary-color: #182a4c;
 

@@ -27,9 +27,12 @@ function Footer() {
         <div className="flex flex-col md:flex-row items-start mx-auto justify-between gap-20">
           <div className="">
             <img
-              src="/img/Logo White.png"
+              src="/img/Logo_White.webp"
               alt="Logo White"
-              className="w-40 rounded-xl"
+              width={160}
+              height={40}
+              loading="lazy"
+              className="w-40 rounded-xl object-contain"
             />
             <p className="font-body text-gray-100 mt-4">
               Desenvolvedor Full Stack apaixonado por criar experiências
@@ -66,6 +69,7 @@ function Footer() {
                   target="_blank"
                   href="https://github.com/RosiestSloth"
                   rel="noopener"
+                  aria-label="Perfil do GitHub"
                   className="text-white text-2xl"
                 >
                   <FaGithub />
@@ -76,6 +80,7 @@ function Footer() {
                   target="_blank"
                   href="https://instagram.com/vinicius___santos1"
                   rel="noopener"
+                  aria-label="Perfil do Instagram"
                   className="text-white text-2xl"
                 >
                   <FaInstagram />
@@ -86,6 +91,7 @@ function Footer() {
                   target="_blank"
                   href="https://wa.me/5562992846807"
                   rel="noopener"
+                  aria-label="Contato via WhatsApp"
                   className="text-white text-2xl"
                 >
                   <FaWhatsapp />
@@ -96,6 +102,7 @@ function Footer() {
                   target="_blank"
                   href="https://linkedin.com/in/rosiestsloth"
                   rel="noopener"
+                  aria-label="Perfil do LinkedIn"
                   className="text-white text-2xl"
                 >
                   <FaLinkedin />

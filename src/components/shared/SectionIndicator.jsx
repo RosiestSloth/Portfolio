@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
+import { useEffect, useState } from 'react';
 
 function SectionIndicator({ sections = [] }) {
   const [activeSection, setActiveSection] = useState(sections[0]?.id || '');

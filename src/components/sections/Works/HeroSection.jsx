@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { useState } from 'react';
 import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
 import DropdownFilter from '@/components/shared/DropdownFilter';
+import OptimizedImage from '@/components/shared/OptimizedImage';
 import Cards from '../../shared/Cards';
 
 function HeroSection() {
@@ -20,7 +21,7 @@ function HeroSection() {
       description:
         'Um site de e-commerce para o lançamento do iPhone 17 Pro Max, focado em design moderno e experiência de usuário.',
       category: ['front-end'],
-      image: '/img/cards/iPhone_17_Pro_Max.png',
+      image: '/img/cards/iPhone_17_Pro_Max.webp',
       skills: ['Tailwindcss', 'React.js', 'Design'],
       link: 'https://i-phone-17-website.vercel.app/',
     },
@@ -29,7 +30,7 @@ function HeroSection() {
       description:
         'Um site para a Clinica Sensory, focado em acessibilidade e experiência de usuário, utilizando as melhores práticas de desenvolvimento web.',
       category: ['front-end'],
-      image: '/img/cards/Clinica_Sensory.png',
+      image: '/img/cards/Clinica_Sensory.webp',
       skills: ['React.ts', 'Figma', 'Tailwindcss'],
       link: 'https://clinica-sensory.vercel.app/',
     },
@@ -38,7 +39,7 @@ function HeroSection() {
       description:
         'Uma aplicação de análise de feedbacks, focada em arquitetura de software escalável e experiência de usuário intuitiva.',
       category: ['full-stack', 'front-end', 'design'],
-      image: '/img/cards/Feedback_Analytics.png',
+      image: '/img/cards/Feedback_Analytics.webp',
       skills: ['React.js', 'Node.js', 'Design'],
       link: 'https://feedback-analytics.vercel.app/',
     },
@@ -47,7 +48,7 @@ function HeroSection() {
       description:
         'Um convite digital para um aniversário, focado em design criativo e experiência de usuário envolvendo.',
       category: ['design', 'front-end'],
-      image: '/img/cards/Invitation.png',
+      image: '/img/cards/Invitation.webp',
       skills: ['React', 'Design', 'Tailwindcss'],
       link: 'https://convite-de-anivers-rio-khaki.vercel.app/',
     },
@@ -56,7 +57,7 @@ function HeroSection() {
       description:
         'A prototipagem de um projeto focado em CRM da empresa Nexus Company, com design system completo.',
       category: ['design', 'front-end'],
-      image: '/img/works/nexus-crm.png',
+      image: '/img/works/nexus-crm.webp',
       skills: ['Figma', 'Design'],
       link: 'https://www.figma.com/design/isnL6i1wxp2Ix6XSuYmQh0/Avex-Company?node-id=0-1&t=tYdAhajRaU9YXpsJ-1',
     },
@@ -118,11 +119,15 @@ function HeroSection() {
                     target="_blank"
                     className="w-full aspect-4/2 relative overflow-hidden cursor-pointer"
                     rel="noopener"
+                    aria-label={`Ver projeto ${item.title}`}
                   >
-                    <img
+                    <OptimizedImage
                       className="absolute inset-0 size-full shadow-md object-cover border border-white rounded-tr-md rounded-tl-md"
                       src={item.image}
                       alt={item.title}
+                      width={600}
+                      height={300}
+                      loading="lazy"
                     />
                     <motion.div
                       variants={{
@@ -145,9 +150,9 @@ function HeroSection() {
 
                   <div className="p-4 flex flex-col gap-2">
                     <div className="flex flex-row gap-2 items-center justify-center">
-                      {item.skills.map((skill, index) => (
+                      {item.skills.map((skill) => (
                         <span
-                          key={index}
+                          key={skill}
                           className="bg-(--primary-color) text-white text-xs font-medium px-2 py-1 rounded w-full text-center"
                         >
                           {skill}

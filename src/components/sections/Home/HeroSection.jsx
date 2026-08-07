@@ -44,8 +44,14 @@ function Hero() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ ...transition, delay: 0.4 }}
               className="absolute z-10 left-1/2 -translate-x-1/2 bottom-0 object-cover size-130 md:size-160 lg:size-200"
-              src="img/Photograpy.png"
+              src="img/Photograpy.webp"
               alt="Vinicius"
+              width={800}
+              height={800}
+              loading="eager"
+              // @ts-expect-error fetchpriority é suportado em navegadores modernos
+              fetchpriority="high"
+              decoding="async"
             />
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}

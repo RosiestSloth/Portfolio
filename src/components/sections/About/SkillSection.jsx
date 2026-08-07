@@ -5,7 +5,7 @@ import {
   FaWandMagicSparkles,
   FaXmark,
 } from 'react-icons/fa6';
-import { SKILLS_DATA, SKILL_CATEGORIES } from '@/data/skillsData';
+import { SKILL_CATEGORIES, SKILLS_DATA } from '@/data/skillsData';
 import BadgeCard from '../../shared/BadgeCard';
 import DropdownFilter from '../../shared/DropdownFilter';
 import SkillDetailModal from '../../shared/SkillDetailModal';

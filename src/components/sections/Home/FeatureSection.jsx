@@ -3,7 +3,7 @@ import Carousel from '@/components/shared/Carousel';
 function Feature() {
   const items = [
     {
-      img: 'img/cards/iPhone_17_Pro_Max.png',
+      img: 'img/cards/iPhone_17_Pro_Max.webp',
       title: 'Site iPhone 17 Pro Max',
       description:
         'Um site de vendas de iPhones, com um design moderno e responsivo, utilizando React e Tailwind CSS.',
@@ -12,7 +12,7 @@ function Feature() {
       tags: ['React', 'Tailwind CSS', 'UI/UX Design'],
     },
     {
-      img: 'img/cards/Clinica_Sensory.png',
+      img: 'img/cards/Clinica_Sensory.webp',
       title: 'Site Clínica Sensory',
       description:
         'Um site para uma clínica de saúde, com um design moderno e responsivo, utilizando Nuxt e Tailwind CSS.',
@@ -21,7 +21,7 @@ function Feature() {
       tags: ['Vue', 'Nuxt', 'Acessibilidade'],
     },
     {
-      img: 'img/cards/Feedback_Analytics.png',
+      img: 'img/cards/Feedback_Analytics.webp',
       title: 'Feedback Analytics',
       description:
         'Um sistema de coleta de feedbacks, com um design moderno e responsivo, utilizando React e Tailwind CSS.',
@@ -30,7 +30,7 @@ function Feature() {
       tags: ['React', 'Tailwind CSS', 'REST API'],
     },
     {
-      img: 'img/cards/Invitation.png',
+      img: 'img/cards/Invitation.webp',
       title: 'Convite Interativo',
       description:
         'Aplicação web interativa para convites personalizados com animações fluidas e confirmação de presença.',

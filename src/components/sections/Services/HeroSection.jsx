@@ -63,8 +63,11 @@ function HeroSection() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ ...transition, delay: 0.3 }}
             className="mt-4 object-cover rounded-md border-2 border-(--primary-color) md:hidden"
-            src="/img/FeedbackAnalytics.png"
+            src="/img/FeedbackAnalytics.webp"
             alt="Feedback Analytics"
+            width={600}
+            height={400}
+            loading="lazy"
           />
 
           <motion.div
@@ -100,8 +103,11 @@ function HeroSection() {
         >
           <img
             className="absolute right-0 w-full h-full object-cover object-left"
-            src="/img/FeedbackAnalytics.png"
+            src="/img/FeedbackAnalytics.webp"
             alt="Feedback Analytics"
+            width={800}
+            height={600}
+            loading="lazy"
           />
         </motion.div>
       </div>
