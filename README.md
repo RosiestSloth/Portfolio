@@ -2,7 +2,7 @@
 
 Este é o meu portfólio pessoal, reconstruído utilizando React 19 e Vite para máxima performance e modernidade.
 
-## 🚀 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **React 19**
 - **Vite**
@@ -11,7 +11,7 @@ Este é o meu portfólio pessoal, reconstruído utilizando React 19 e Vite para 
 - **Biome** (para linting e formatação)
 - **React Router 7**
 
-## 🛠️ Como executar o projeto
+## Como executar o projeto
 
 1. Clone o repositório:
 ```bash
@@ -34,7 +34,7 @@ npm run build
 npm run preview
 ```
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 ├── src/
@@ -46,14 +46,14 @@ npm run preview
 └── vite.config.js      # Configuração do Vite
 ```
 
-## 🎨 Componentes Principais
+## Componentes Principais
 
 - `HeroSection.jsx` - Seção de destaque em cada página
 - `GalleryPage.jsx` - Portfólio de projetos e fotografias
 - `SkillSection.jsx` - Exibição de habilidades técnicas
 - `Contact/HeroSection.jsx` - Formulário e informações de contato
 
-## 🌐 Funcionalidades
+## Funcionalidades
 
 - Design responsivo e moderno
 - Animações fluidas com Motion
@@ -61,20 +61,16 @@ npm run preview
 - Otimização de assets
 - Navegação SPA com React Router
 
-## 🎯 Próximos Passos
+## Próximos Passos
 
 - [ ] Adicionar mais projetos à galeria
 - [ ] Implementar sistema de Blog
 - [ ] Melhorar ainda mais o SEO
 - [ ] Adicionar testes unitários e de integração
 
-## 📝 Licença
+## Autor
 
-Este projeto está sob a licença [MIT](LICENSE).
-
-## 👨‍💻 Autor
-
-Vinicius - Desenvolvedor Full Stack
+Vinicius
 
 ---
 
